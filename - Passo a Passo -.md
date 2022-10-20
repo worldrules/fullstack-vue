@@ -3,4 +3,28 @@
 
 - Instalar Composer Global na Maquina (Baixar o instalador do site e instalar)
 - Criar Projeto -> composer create-project codeigniter4/appstarter backend
+- Criar server local -> php spark serve
+- Criar tabela no banco -> phpmyadmin
+- Configurar .env na raiz (colocar . no começo do nome do arquivo)
+- Criar a migrate -> php spark make:migration Products /  php spark migrate
+- Criar a model de Produtos -> php spark make:model ProductModel
+- Criar a controler de Produtos ->php spark make:controller Products --restful
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
 - 
