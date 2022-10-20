@@ -10,8 +10,8 @@
 - Criar a model de Produtos -> php spark make:model ProductModel
 - Criar a controler de Produtos ->php spark make:controller Products --restful
 - Testar Get e Post via Postman -> localhost 8080/products
-- 
-- 
+- Criando filtro de CORS -> php spark make:filter Cors
+- Instalar Node JS
 - 
 - 
 - 
