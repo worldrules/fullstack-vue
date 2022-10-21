@@ -14,8 +14,8 @@
 - Instalar Node JS
 - Criada a Pasta Front 
 - Instalar o vite -> npm create vite@latest / npm i depois
-- 
-- - 
+- Instalar o router dom ->npm i react-router-dom
+- Instalar BULMA 
 - 
 - 
 - 
