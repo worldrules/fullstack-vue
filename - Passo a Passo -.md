@@ -12,8 +12,8 @@
 - Testar Get e Post via Postman -> localhost 8080/products
 - Criando filtro de CORS -> php spark make:filter Cors
 - Instalar Node JS
-- 
-- 
+- Criada a Pasta Front 
+- Instalar o vite -> npm create vite@latest / npm i depois
 - 
 - - 
 - 
