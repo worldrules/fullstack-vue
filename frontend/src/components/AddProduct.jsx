@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import { axios } from "axios";
-import {useHistory} from "react-router-dom";
+import axios from "axios";
+import {useNavigate} from "react-router-dom";
+
 
 
 const AddProduct = () => {
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState("");
-  const history = useHistory();
+  const navigate = useNavigate();
 
 
   const saveProduct = async (e) => {
@@ -15,7 +16,8 @@ const AddProduct = () => {
       title: title,
       price: price
     });
-    history.push("/")
+    navigate("/");
+
   };
 
   return (

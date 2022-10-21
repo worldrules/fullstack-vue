@@ -35,7 +35,13 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->resource('products');
+
+
+$routes->resource('products', ['filter' => 'cors']);
+// $routes->get('api/users', 'UserController::index', ['filter' => 'cors']);
+
+
+
 
 /*
  * --------------------------------------------------------------------

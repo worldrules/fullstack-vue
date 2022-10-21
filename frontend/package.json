@@ -1,6 +1,7 @@
 {
   "name": "frontend",
   "private": true,
+  "proxy": "127.0.0.1",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
