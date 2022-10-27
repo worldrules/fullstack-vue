@@ -1,6 +1,8 @@
 <template>
   <div>
     <h1>Product List</h1>
+    <router-link :to="{name: 'AddProduct'}" class="button">Add New</router-link>
+
     <table class="table is-striped is-fullwidth">
       <thead>
         <tr>
@@ -10,10 +12,13 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Title</td>
-          <td>Price</td>
-          <td>Actions</td>
+        <tr v-for="product in products" :key="product.id">
+          <td>{{product.title}}</td>
+          <td>{{product.price}}</td>
+          <td>
+            <router-link :to="{name: 'EditProduct', params:{id: product.id}}" class="button is-info is-small mr-3">Edit</router-link>
+            <button class="button is-danger is-small" @click="deleteProduct(product.id)">Delete</button>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -35,12 +40,20 @@ export default {
   methods: {
     async getProducts() {
       try {
-        const response = await axios.get("http://localhost:8080/product");
+        const response = await axios.get("products");
         this.products = response.data;
       } catch (error) {
         console.log(error);
       }
     },
+    async deleteProduct(id) {
+      try {
+        await axios.delete(`products/${id}`);
+        this.getProducts();
+      } catch (error) {
+        console.log(error);
+      }
+    }
   },
 };
 </script>
